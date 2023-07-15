@@ -1,7 +1,7 @@
 import requests
 
-Token_telebot = "5892940185:AAGv1E2CovFqIlY0-yE2N8w03X6yeExLJa4"
-chat_id = "5983861224"
+Token_telebot = "Token"
+chat_id = "ID"
 # Bot_username = "@OnePiece009Bot"
 
 

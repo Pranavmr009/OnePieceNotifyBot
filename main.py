@@ -13,16 +13,21 @@ def main():
     soup = BeautifulSoup(r.text, "lxml")
     results = soup.find("div", class_="text-lg font-bold")
 
-    print(results.text)
-    if changed in results.text.lower():
-        print("Not changed")
+    t = int(str(results.text)[-4:])
 
-    elif changed not in results.text:
+    if current <= t:
         text = str(results.text + " Released " + url)
         tele.send_msg(text=text)
-        current += 1
+        print(t)
+        current = t + 1
         print(current)
-        main()
+        print("Done")
+
+    elif current > t:
+        print("Not changed")
+        print(current)
+        print(t)
+
 
     else:
         print("Error")
